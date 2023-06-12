@@ -15,19 +15,18 @@ function DomainList() {
     };
 
     return (
-        <>
-            <h1>Domain List</h1>
-            <div className="mb-3">
-                <label htmlFor="domainFilter" className="form-label">Filter by:</label>
-                <input type="email" className="form-control" id="domainFilter" onChange={handleChange} />
+        <div className="container">
+            <div className="form-floating mb-3">
+                <input type="url" className="form-control" id="domainFilter" onChange={handleChange} placeholder="" />
+                <label htmlFor="domainFilter">Filter by:</label>
             </div>
 
-            <ul className="list-group">
+            <ul className="list-group mb-3">
                 {filteredDomains.map((domain) => (
                     <li className="list-group-item" key={domain.name}>{domain.name}</li>
                 ))}
             </ul>
-        </>
+        </div>
     );
 }
 
