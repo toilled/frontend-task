@@ -19,7 +19,7 @@ function DomainList() {
             <h1>Domain List</h1>
             <div className="mb-3">
                 <label htmlFor="domainFilter" className="form-label">Filter by:</label>
-                <input type="email" className="form-control" id="domainFilter" onChange={handleChange} />
+                <input type="text" className="form-control" id="domainFilter" onChange={handleChange} />
             </div>
 
             <ul className="list-group">
